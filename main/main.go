@@ -1,8 +1,6 @@
 package main
 
-import "fmt"
-
-func main(){
+func main() {
 	//fmt.Print("Hello World!")
 	//study.SortSelice()
 	//stack:= study.NewSliceEntry()
@@ -17,17 +15,17 @@ func main(){
 	//}
 	//mySlice.Clear()
 	//fmt.Println("is empty?\t",mySlice.IsEmpty())
-	s:= "abcdefg"
-	var stack []uint8
-	for i := 0; i < len(s); i++ {
-		fmt.Println(s[i])
-		stack = append(stack,s[i])
-	}
-	fmt.Println(stack)
-	for i := 0; i < len(stack); i++ {
-		fmt.Print(stack[i],"\t\n")
-	}
-	fmt.Println("---------------")
-	stack = stack[:len(stack)-1]
-	fmt.Println(stack)
+	//s:= "abcdefg"
+	//var stack []uint8
+	//for i := 0; i < len(s); i++ {
+	//	fmt.Println(s[i])
+	//	stack = append(stack,s[i])
+	//}
+	//fmt.Println(stack)
+	//for i := 0; i < len(stack); i++ {
+	//	fmt.Print(stack[i],"\t\n")
+	//}
+	//fmt.Println("---------------")
+	//stack = stack[:len(stack)-1]
+	//fmt.Println(stack)
 }
