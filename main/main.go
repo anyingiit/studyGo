@@ -28,4 +28,6 @@ func main() {
 	//fmt.Println("---------------")
 	//stack = stack[:len(stack)-1]
 	//fmt.Println(stack)
+	str:="test"
+	str = str[:len(str)-1]
 }
