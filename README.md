@@ -3,7 +3,7 @@
 
 # StudyGo
 
-Study go: no README or manifest to go on; based on its name, built with Go, this looks like a learning exercise — open the repository to confirm.
+A personal archive of Go solutions to LeetCode-style exercises and two small from-scratch data-structure experiments, with no command-line tool of its own.
 
 [![CI](https://github.com/anyingiit/studyGo/actions/workflows/ci.yml/badge.svg)](https://github.com/anyingiit/studyGo/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/anyingiit/studyGo)](LICENSE)
@@ -24,7 +24,7 @@ Study go: no README or manifest to go on; based on its name, built with Go, this
 
 ## About The Project
 
-Study go: no README or manifest to go on; based on its name, built with Go, this looks like a learning exercise — open the repository to confirm.
+studyGo is anyingiit's personal practice repository for working through algorithm exercises in Go. `function/leetcode/` holds one solution file per LeetCode-style problem — removing duplicates from a sorted array, merging intervals, checking balanced brackets, rotating a matrix, and others — each paired with a written explanation of the approach in its own file. `function/study/` holds two small experiments built from scratch: a slice-backed stack (`myStack.go`) and a selection-sort demo built on `sort.Interface` (`sortSelice.go`). `main/main.go` is a scratch driver whose body is almost entirely commented out; running it compiles but produces no output, and nothing in the repository is wired together into a program meant to be installed or run directly.
 
 See the [open issues](https://github.com/anyingiit/studyGo/issues) for planned features and known issues.
 
@@ -32,20 +32,25 @@ See the [open issues](https://github.com/anyingiit/studyGo/issues) for planned f
 
 ### Prerequisites
 
-- Git
+- [Go](https://go.dev/) 1.22 or newer — the toolchain that builds and tests every package under `function/` and `main/`
 
 ### Installation
 
 ```sh
 git clone https://github.com/anyingiit/studyGo.git
 cd studyGo
+go build ./...
 ```
+
+`go build ./...` compiles every package with nothing to fetch: the module imports only the standard library, so there are no third-party dependencies to resolve.
 
 ## Usage
 
 ```sh
-studyGo --help
+go test ./function/study/...
 ```
+
+There is no command-line tool to run: `main/main.go`'s `func main` body is commented out except for two lines that slice a string and discard the result, so `go run ./main` builds and exits without printing anything. To see real behavior, run the test above, or open a problem's `.go` file next to its written explanation under `function/leetcode/`.
 
 ## Contributing
 
